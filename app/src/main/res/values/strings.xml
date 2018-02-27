@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name" translatable="false">p1-businesscard</string>
+    <string name="subtitle">Food | Drinks | Vibes</string>
+    <string name="address" translatable="false">Main Street 2, Hometown</string>
+    <string name="url" translatable="false">cafebar.com</string>
+    <string name="phonenumber" translatable="false">+31 (0) 123 45 678</string>
+    <string name="hours_open">Open daily from 12.00 till 03.00 \n Ask our staff for cocktail of the day</string>
+
+    <!-- ContentDescriptions -->
+    <string name="contentDescription_headerpic">Headerpicure, photo by Austin Gardner on Unsplash</string>
+    <string name="contentDescription_logo" translatable="false">Cafebar logo</string>
+</resources>

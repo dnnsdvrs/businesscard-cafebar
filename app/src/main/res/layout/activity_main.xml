@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.android.p1_businesscard.MainActivity">
+
+    <ImageView
+        android:contentDescription="@string/contentDescription_headerpic"
+        android:id="@+id/cafe-header-picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cafe_bar_small" />
+
+
+    <ImageView
+        android:contentDescription="@string/contentDescription_logo"
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/cafe-header-picture"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/logo_cafe_bar"
+ />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cafe-header-picture"
+        android:background="@drawable/gradient">
+
+        <LinearLayout
+            android:id="@+id/viewgroup_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:orientation="horizontal">
+
+            <View
+                style="@style/Divider"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/text_subtitle_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/subtitle"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_larger"
+                android:textStyle="bold" />
+
+            <View
+                style="@style/Divider"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewgroup_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewgroup_subtitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_info_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_location_city_white_24dp"
+                android:drawableStart="@drawable/ic_location_city_white_24dp"
+                android:drawablePadding="8dp"
+                android:onClick="addressClick"
+                android:text="@string/address"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/text_info_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_public_white_24dp"
+                android:drawableStart="@drawable/ic_public_white_24dp"
+                android:drawablePadding="8dp"
+                android:onClick="websiteClick"
+                android:text="@string/url"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/text_info_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_local_phone_white_24dp"
+                android:drawableStart="@drawable/ic_local_phone_white_24dp"
+                android:drawablePadding="8dp"
+                android:onClick="phoneClick"
+                android:text="@string/phonenumber"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+
+            android:id="@+id/text_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewgroup_info_text"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/textborder"
+            android:gravity="center_horizontal"
+            android:text="@string/hours_open"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
